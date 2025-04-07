@@ -13,42 +13,38 @@
             <h1>Mortgage Calculator</h1>
             <a href=""> Clear All</a>
         </section>
-        <section class="amount">
-        <p>Mortgage Amount</p> 
-        <div>
-            <input type="number" id="symbol">
-            <label for="symbol" id="amount">£</label>
-        </div>
+        <section class="input-number-container" >
+        <p>Mortgage Amount</p>
+        <input type="number" class="input-number" id="mortgageAmount" required />
         </section>
         <section class="term">
-            <div id="term">
-                <p> Mortgage Term</p> 
-                <input type="number" id="Mortgageterm">
-                <label for="Mortgageterm" id="input2">yearys</label>
+            <div class="input-number-container1">
+                <p> MortgageTerm</p> 
+                <input type="number" class="input-number1" id="mortgageTerm" required />
             </div>
           
-            <div id="number">
+            <div class="input-number-container">
                 <p> Interst Rate </p>
-                <input type="number" id="Interstrate">
-                <label for="Interstrate" id="input3">%</label>
+                <input type="number" class="input-number"  id="interestRate" required />
+              
             </div>
         
         </section>
         <section class="type" >
            <p>Mortgage Type</p> 
            <div class="Repayment">
-            <input type="radio" id="mycheckbox">
+            <input type="radio"  id="repayment" name="mortgageType" required />
             <label for="mycheckbox"> Repayment</label>
            </div>
             <div class="Interest">
-                <input type="radio" id="thecheckbox">
+                <input type="radio" id="interestOnly" name="mortgageType" required/>
                 <label for="thecheckbox"> Interest Only</label>
             </div>
-           
-          
-            <button class="icon button" ><i><img src="/assets copy/images/icon-calculator.svg" alt=""></i>Calculat Repayments</button>
+            <button type="submit" class="icon button" id="calculateButton" >
+            <i><img src="/assets copy/images/icon-calculator.svg" alt=""></i>Calculat Repayments</button>
            
         </section>
+        <div id="errormessage" style="color: red;"></div>
          
     </div>
     <div class="tow">
@@ -57,5 +53,6 @@
         <p>complet the from and click "calculate Repayments" to see what you monthly Repayments would be .</p>
     </div>
    </div>
+   <script src="script.js"></script>
 </body>
 </html>
